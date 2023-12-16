@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical Q-11</title>
+</head>
+<body>
+    <div id="signup" style="border: 4px solid rgb(89, 0, 89); display:inline-block; width: 
+40%; height: 450px;">
+        <h2 style="text-align: center; color:rgb(89, 0, 89);"><u><b>Enter Signup Details</b></u></h2>
+        <div style="display: inline-block; position: absolute; left: 100px; ">
+            <span style="color:red;">*</span> Name <br><br>
+            <span style="color:red;">*</span> Age <br><br>
+            <span style="color:red;">*</span> Phone <br><br>
+            <span style="color:red;">*</span> Gender <br><br>
+            <span style="color:red;">*</span> Password<br><br>
+        </div>
+        <div style="display: inline-block; position: absolute; left:230px; ">
+            <form action="submit.php" method="post">
+                <input type="text" value="" name="NAME"><br><br>
+                <input type="int" value="" name="AGE"><br><br>
+                <input type="text" value="" name="PHONE"><br><br>
+                <input type="text" value="" name="GENDER"><br><br>
+                <input type="password" value="" name="PASSWORD"><br><br>
+                <input type="submit" value="Signup" style="background-color: purple; border:0px; width:100%; height: 
+40px; border-radius: 10px; color: white; font-size: large; font-weight: bold;">
+            </form>
+        </div>
+    </div>
+    <div id="signin" style="border: 4px solid rgb(89, 0, 89); display:inline-block; width: 
+40%; height: 450px;">
+        <h2 style="text-align: center; color:rgb(89, 0, 89);"><u><b>Enter Signin Details</b></u></h2>
+        <div style="display: inline-block; position: absolute; left: 740px; ">
+            <span style="color:red;">*</span> Phone <br><br>
+            <span style="color:red;">*</span> Password<br><br>
+        </div>
+        <div style="display: inline-block; position: absolute; left:850px">
+            <form action="verify.php" method="post">
+                <input type="text" value="" name="PHONE"><br><br>
+                <input type="password" value="" name="PASSWORD"><br><br>
+                <input type="submit" value="Signin" style="background-color: purple; border:0px; width:100%; height: 
+40px; border-radius: 10px; color: white; font-size: large; font-weight: bold;">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

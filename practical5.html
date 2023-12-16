@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical Q-5</title>
+    <style>
+        .btn-grid {
+            display: flex;
+            flex-direction: column;
+        }
+  
+        .btn-group {
+            display: flex;
+        }
+  
+        button {
+            margin: 5px 2px 5px 2px;
+            width: 6rem;
+            height: 3rem;
+        }
+  
+        #red-btn {
+            background-color: red;
+        }
+  
+        #blue-btn {
+            background-color: blue;
+        }
+  
+        #green-btn {
+            background-color: green;
+        }
+  
+        #size10-btn {
+            background-color: yellow;
+        }
+  
+        #size20-btn {
+            background-color: ORANGE;
+        }
+  
+        #size30-btn {
+            background-color: orangered;
+        }
+  
+        #font-1 {
+            background-color: blueviolet;
+        }
+  
+        #font-2 {
+            background-color: rgb(91, 30, 148);
+        }
+  
+        #font-3 {
+            background-color: rgb(60, 20, 97);
+        }
+    </style>
+ 
+</head>
+<body>
+    <p id="paragraph">
+        A subnet mask is a number that distinguishes the network address and the host address within an IP address. A
+        subnet is a smaller network within a network that requires a subnet mask.
+  
+        Subnetting is the process of dividing a network into two or more subnets. Its primary function is to make the
+        routing of data within a network more efficient and secure. Subnetting also helps make better use of IPv4
+        addresses.
+  
+        When you connect a device to a network, the network assigns an IP address to the device. That IP address
+        consists of two parts: the network portion and the host portion. The network portion of the IP address
+        identifies the overall network while the host portion identifies the device.
+    </p>
+  
+    <div class="btn-grid">
+        <div class="btn-group">
+            <button id="red-btn" class="color-btn">Red</button>
+            <button id="blue-btn" class="color-btn">Blue</button>
+            <button id="green-btn" class="color-btn">Green</button>
+        </div>
+  
+        <div class="btn-group">
+            <button id="size10-btn" class="size-btn">10</button>
+            <button id="size20-btn" class="size-btn">20</button>
+            <button id="size30-btn" class="size-btn">30</button>
+        </div>
+  
+        <div class="btn-group">
+            <button id="font-1" class="font-btn">Helvetica, sans-serif</button>
+            <button id="font-2" class="font-btn">Times New Roman</button>
+            <button id="font-3" class="font-btn">Courier New</button>
+        </div>
+    </div>
+ 
+</body>
+<script>
+ 
+    const para = document.getElementById('paragraph')
+    const colorBtns = document.querySelectorAll('.color-btn')
+    const sizeBtns = document.querySelectorAll('.size-btn')
+    const fontBtns = document.querySelectorAll('.font-btn')
+  
+    const changeColor = (e) => {
+        const color = e.target.innerText.toLowerCase();
+        para.style.color = color
+    }
+  
+    const changeSize = (e) => {
+        const size = parseInt(e.target.innerText.toLowerCase())
+        console.log(size)
+        para.style.fontSize = `${size}px`
+    }
+  
+    const changeFont = (e) => {
+        const font = e.target.innerText;
+        console.log(font)
+        para.style.fontFamily = font
+    }
+  
+    colorBtns.forEach((btn) => {
+        btn.addEventListener("click", changeColor)
+    })
+  
+    sizeBtns.forEach((btn) => {
+        btn.addEventListener("click", changeSize)
+    })
+  
+    fontBtns.forEach((btn) => {
+        btn.addEventListener('click', changeFont)
+    })
+  
+ </script>
+ 
+</html>

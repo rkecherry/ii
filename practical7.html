@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical Q-7</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js">
+    </script>
+    <style>
+        .intro {
+            color: white;
+            background-color: maroon;
+            float: right;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        table {
+            margin: 0 100;
+            font-size: large;
+            border: 1px solid black;
+        }
+
+        h1 {
+            margin: 0 250px;
+            color: purple;
+            font-size: 30px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+
+        th,
+        td {
+            font-weight: bold;
+            padding: 10px;
+            text-align: center;
+        }
+
+        td {
+            font-weight: lighter;
+            background-color: rgb(243, 199, 243);
+        }
+    </style>
+
+</head>
+<body>
+    <div class="intro">
+        Name- Riya Kushwah<br>
+        Roll no.- CSC/21/10
+    </div>
+    <section>
+        <h1><b>PET DETAIL</b></h1><br>
+        <table id='table'>
+            <tr>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>WEIGHT</th>
+                <th>TYPE</th>
+                <th>LIKES</th>
+            </tr>
+            <script>
+                $(document).ready(function () {
+                    $.getJSON("pet.json",
+                        function (data) {
+                            var Pet = '';
+                            $.each(data, function (key, value) {
+                                Pet += '<tr>';
+                                Pet += '<td>' +
+                                    value.name + '</td>';
+                                Pet += '<td>' +
+                                    value.age + '</td>';
+                                Pet += '<td>' +
+                                    value.weight + '</td>';
+                                Pet += '<td>' +
+                                    value.type + '</td>';
+                                Pet += '<td>' +
+                                    value.like + '</td>';
+                                Pet += '</tr>';
+                            });
+                            $('#table').append(Pet);
+                        });
+                });
+            </script>
+    </section>
+
+</body>
+</html>
